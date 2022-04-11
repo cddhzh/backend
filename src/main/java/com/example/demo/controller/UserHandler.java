@@ -70,4 +70,9 @@ public class UserHandler {
         String token = request.getHeader("token");
         return JwtUtil.checkToken(token);
     }
+    @GetMapping("/findbyid/{id}")
+    public User findbyid(@PathVariable Integer id){
+        return userRepository.findById(id).get();
+    }
+
 }

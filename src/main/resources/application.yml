@@ -9,5 +9,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  profiles:
+    active: dev #上线改为服务器配置，即prod
 server:
   port: 8181

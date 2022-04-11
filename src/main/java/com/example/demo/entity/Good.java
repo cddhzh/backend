@@ -2,11 +2,9 @@ package com.example.demo.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,4 +18,14 @@ public class Good {
     String ownerid;
     String url;
     Date time;
+    String goodimgs;
+    @Transient
+    List<String> imgUrls;
+
+    public List<String> getImgUrls(String goodimgs) {
+        if(goodimgs != null){
+            imgUrls = List.of(goodimgs.split(" "));
+        }
+        return imgUrls;
+    }
 }

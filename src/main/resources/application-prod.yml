@@ -1,0 +1,5 @@
+#服务器配置
+file:
+  staticPath:
+  staticPatternPath: /uploadImg/**
+  uploadFolder: /www/upload/

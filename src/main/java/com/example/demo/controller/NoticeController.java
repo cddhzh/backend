@@ -38,5 +38,10 @@ public class NoticeController {
             return noticeRepository.findBySchool(name,pageable);
         }
     }
+
+    @GetMapping("/findAllNotice")
+    public List<Notice> findAllNotice(){
+        return noticeRepository.findAll();
+    }
 }
 

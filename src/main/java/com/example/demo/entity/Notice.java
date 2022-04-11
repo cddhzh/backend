@@ -27,4 +27,6 @@ public class Notice {
     private String school;
 
     private Integer visit_num;
+
+    private String cover;
 }

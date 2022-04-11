@@ -1,0 +1,5 @@
+#本机配置
+file:
+  staticPath: http://localhost:8181
+  staticPatternPath: /uploading/**
+  uploadFolder: D://uploadFile//

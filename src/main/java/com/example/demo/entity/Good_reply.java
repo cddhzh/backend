@@ -5,16 +5,15 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
 @Data
-public class Discussion {
+@Entity
+public class Good_reply {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     Integer id;
-    Integer subjectID;
-    String title;
+    Integer goodid;
+    String authorid;
     String content;
-    String authorID;
     Date time;
     @Transient
     String avatar;

@@ -64,6 +64,16 @@ public class ActivityController {
             Pageable pageable = PageRequest.of(page-1,size,sort);
             return activityRepository.findAll(pageable);
         }
+        else if(range==null&&state=="*"||range.equals("*")&&state.equals("*")){
+            Sort sort = Sort.by(Sort.Direction.DESC,"id");
+            Pageable pageable = PageRequest.of(page-1,size,sort);
+            return activityRepository.findAll(pageable);
+        }
+        else if(range!=null&&state=="*"||range!="*"&&state.equals("*")){
+            Sort sort = Sort.by(Sort.Direction.DESC,"id");
+            Pageable pageable = PageRequest.of(page-1,size,sort);
+            return activityRepository.findBySchool(pageable,range);
+        }
         else if(range.equals("*")&&state.equals("已结束")||range==null&&state.equals("已结束")){
             Sort sort = Sort.by(Sort.Direction.DESC,"id");
             Pageable pageable = PageRequest.of(page-1,size,sort);

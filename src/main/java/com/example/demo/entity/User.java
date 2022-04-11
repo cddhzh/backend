@@ -18,6 +18,7 @@ public class User {
     private String school;
     private String major;
     private String academy;
+    private String avatar;
     @Transient
     private String token;
 }

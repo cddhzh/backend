@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -54,5 +55,23 @@ class UserRepositoryTest {
     void findAllPhone(){
         List<String> phones = userRepository.findAllPhone();
         System.out.println(phones);
+    }
+
+    @Test
+    void findAvatars(){
+        List<String> uids = new ArrayList<>();
+        List<String> avatars = new ArrayList<>();
+        uids.add("cdd");
+        uids.add("hzh");
+        uids.add("cdd");
+        for (int i = 0; i < uids.size(); i++){
+            avatars.add(userRepository.findAvatar(uids.get(i)));
+        }
+        System.out.println(avatars);
+    }
+
+    @Test
+    void findALlByPage(){
+
     }
 }
