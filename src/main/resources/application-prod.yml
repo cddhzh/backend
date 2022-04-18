@@ -1,5 +1,5 @@
 #服务器配置
 file:
-  staticPath:
-  staticPatternPath: /uploadImg/**
-  uploadFolder: /www/upload/
+  staticPath: http://106.14.37.85:8181
+  staticPatternPath: /uploading/**
+  uploadFolder: /root/upload/

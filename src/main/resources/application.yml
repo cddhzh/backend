@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/mima?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://106.14.37.85:3306/mima?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
     username: root
-    password: 200009
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
@@ -10,6 +10,6 @@ spring:
       hibernate:
         format_sql: true
   profiles:
-    active: dev #上线改为服务器配置，即prod
+    active: prod #上线改为服务器配置，即prod
 server:
   port: 8181

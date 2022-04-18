@@ -14,7 +14,7 @@ public class Good {
     Integer id;
     String goodname;
     String description;
-    float price;
+    String price;
     String ownerid;
     String url;
     Date time;
